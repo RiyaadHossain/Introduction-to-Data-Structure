@@ -22,7 +22,7 @@ int main()
     vec.clear();   // Clears the vector elements. Do not delete the memory, only clear the value.
     cout << "Empty: " << vec.empty() << endl;
 
-    vec.assign(3, 3); // 1st Param: postion, 2nd Param: value to be assigned
+    vec.assign(3, 3); // 1st Param: postion, 2nd Param: value to be assigned (Note: resize the vector & all elements will take the user defined value)
     vec.erase(vec.begin() + 1);
 
     vec.push_back(2);
@@ -34,7 +34,7 @@ int main()
     cout << endl;
 
     vector<int>::iterator it = find(vec.begin(), vec.end(), 5);
-    bool(it != vec.end()) ? cout << "Found" : cout << "Not Found";
+    it != vec.end() ? cout << "Found" : cout << "Not Found";
 
     return 0;
 }
