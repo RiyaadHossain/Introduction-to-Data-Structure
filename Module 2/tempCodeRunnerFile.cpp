@@ -1,0 +1,1 @@
+    cout << bool(it == vec.end());
