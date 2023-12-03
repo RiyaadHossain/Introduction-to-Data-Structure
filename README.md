@@ -8,3 +8,5 @@
 - Module 2: `STL: Vector`
 - Module 2.5: `Practice Day`
 - Module 3: `Prefix Sum & Binary Search`
+- Module 3.5: `Practice Day`
+- Module 5: `Singly Linked List`
