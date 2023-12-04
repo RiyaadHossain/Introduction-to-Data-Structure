@@ -81,6 +81,12 @@ void insert_node_at_pos(Node *&head, int pos, int val)
         tmp = tmp->next;
     }
 
+    if (!tmp)
+    {
+        cout << "Invalid Position" << endl;
+        return;
+    }
+
     newNode->next = tmp->next;
     tmp->next = newNode;
 }
@@ -120,6 +126,12 @@ void delete_node_at_pos(Node *&head, int pos)
             return;
         }
         tmp = tmp->next;
+    }
+
+    if (!tmp)
+    {
+        cout << "Invalid Position" << endl;
+        return;
     }
 
     Node *delNode = tmp->next;

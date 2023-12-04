@@ -10,3 +10,4 @@
 - Module 3: `Prefix Sum & Binary Search`
 - Module 3.5: `Practice Day`
 - Module 5: `Singly Linked List`
+- Module 6: `Singly Linked List Operations`
