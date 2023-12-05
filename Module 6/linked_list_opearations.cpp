@@ -73,18 +73,12 @@ void insert_node_at_pos(Node *&head, int pos, int val)
     Node *tmp = head;
     while (pos--)
     {
+        tmp = tmp->next;
         if (!tmp)
         {
             cout << "Invalid Position" << endl;
             return;
         }
-        tmp = tmp->next;
-    }
-
-    if (!tmp)
-    {
-        cout << "Invalid Position" << endl;
-        return;
     }
 
     newNode->next = tmp->next;
@@ -120,18 +114,13 @@ void delete_node_at_pos(Node *&head, int pos)
 
     while (pos--)
     {
-        if (!tmp)
+        tmp = tmp->next;
+
+        if (!tmp->next)
         {
             cout << "Invalid Position" << endl;
             return;
         }
-        tmp = tmp->next;
-    }
-
-    if (!tmp)
-    {
-        cout << "Invalid Position" << endl;
-        return;
     }
 
     Node *delNode = tmp->next;
