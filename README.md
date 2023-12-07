@@ -12,3 +12,5 @@
 - Module 5: `Singly Linked List`
 - Module 6: `Singly Linked List Operations`
 - Module 6.5: `Practice Day`
+- Module 7: `Singly Linked List Recap`
+- Module 7.5: `Practice Day`
