@@ -14,3 +14,6 @@
 - Module 6.5: `Practice Day`
 - Module 7: `Singly Linked List Recap`
 - Module 7.5: `Practice Day`
+- Module 8: `Assignment - 1`
+- Module 9: `Doubly LinkedList`
+- Module 10: `STL List & Reverse List & Cycle Detection`
