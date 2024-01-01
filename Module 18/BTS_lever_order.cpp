@@ -16,40 +16,31 @@ public:
     }
 };
 
-void preOrder(Node *root)
+void levelOrder(Node *root)
 {
-    if (root == NULL)
-        return;
+    queue<Node *> qu;
 
-    cout << root->val << " ";
-    preOrder(root->left);
-    preOrder(root->right);
-}
+    qu.push(root);
 
-void postOrder(Node *root)
-{
-    if (root == NULL)
-        return;
+    while (!qu.empty())
+    {
+        // 1. Save & Pop front node
+        Node *front = qu.front();
+        qu.pop();
 
-    postOrder(root->left);
-    postOrder(root->right);
-    cout << root->val << " ";
-}
+        // 2. Do something
+        cout << front->val << " ";
 
-void inOrder(Node *root)
-{
-    if (root == NULL)
-        return;
-
-    inOrder(root->left);
-    cout << root->val << " ";
-    inOrder(root->right);
+        // 3. Push children nodes
+        if (front->left)
+            qu.push(front->left);
+        if (front->right)
+            qu.push(front->right);
+    }
 }
 
 int main()
 {
-
-    // Node creation
     Node *root = new Node(10);
     Node *node1 = new Node(20);
     Node *node2 = new Node(30);
@@ -79,21 +70,7 @@ int main()
     node7->left = node9;
     node7->right = node10;
 
-    /*  Traversing */
-    // 1. Pre-Order -> root, left, right
-    cout << "Pre-Order: ";
-    preOrder(root);
-    cout << endl;
-
-    // 2. Post-Order -> left, right, root
-    cout << "Post-Order: ";
-    postOrder(root);
-    cout << endl;
-
-    // 3. In-Order -> left, root, right
-    cout << "In-Order: ";
-    inOrder(root);
-    cout << endl;
+    levelOrder(root);
 
     return 0;
 }
